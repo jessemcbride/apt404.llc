@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #030303;
+  --font-apt-sans: "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-apt-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", monospace;
+  --door-shift: 0px;
+  --door-brightness: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #030303;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.055), transparent 28rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 18rem),
+    #030303;
+  color: #f4f4f0;
+  font-family: var(--font-apt-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: #f4f4f0;
+  color: #030303;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
